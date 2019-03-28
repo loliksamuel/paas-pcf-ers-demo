@@ -46,6 +46,21 @@ Then go to the http://localhost:8080 in your browser
 ### Running on Cloud Foundry
 Take a look at the manifest file for the recommended setting. Adjust them as per your environment.
 
+ 
+
+```bash
+cf login -a https://api.run.pivotal.io
+cf create-space spc1 -o allocation
+cf target -o allocation -s spc1
+cf push -n mysubdomain6
+```
+ 
+
+ 
+wait and see long logs
+see the route
+http://mysubdomain4.cfapps.io/all
+
 ## Labs/Demo Scripts summary
 We have a [Labs](https://github.com/Pivotal-Field-Engineering/pcf-ers-demo/tree/master/Labs) folder to help you learn PCF. These labs can be used for workshops or self-training.    
 
