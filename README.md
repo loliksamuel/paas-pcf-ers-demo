@@ -32,16 +32,6 @@ $ cd [REPO]
 $ ./mvnw clean install
 ``` 
 
-### To run the application locally
-The application is set to use an embedded H2 database in non-PaaS environments, and to take advantage of Pivotal CF's auto-configuration for services. To use a MySQL Dev service in PCF, simply create and bind a service to the app and restart the app. No additional configuration is necessary when running locally or in Pivotal CF.
-
-In Pivotal CF, it is assumed that a Pivotal MySQL service will be used.
-
-```
-$ ./mvnw spring-boot:run
-```
-
-Then go to the http://localhost:8080 in your browser
 
 ### Running on Cloud Foundry
 Take a look at the manifest file for the recommended setting. Adjust them as per your environment.
@@ -60,6 +50,18 @@ cf push -n mysubdomain6
 wait and see long logs
 see the route
 http://mysubdomain4.cfapps.io/all
+
+
+### Running on local machine
+The application is set to use an embedded H2 database in non-PaaS environments, and to take advantage of Pivotal CF's auto-configuration for services. To use a MySQL Dev service in PCF, simply create and bind a service to the app and restart the app. No additional configuration is necessary when running locally or in Pivotal CF.
+
+In Pivotal CF, it is assumed that a Pivotal MySQL service will be used.
+
+```
+$ ./mvnw spring-boot:run
+```
+
+Then go to the http://localhost:8080 in your browser
 
 ## Labs/Demo Scripts summary
 We have a [Labs](https://github.com/Pivotal-Field-Engineering/pcf-ers-demo/tree/master/Labs) folder to help you learn PCF. These labs can be used for workshops or self-training.    
