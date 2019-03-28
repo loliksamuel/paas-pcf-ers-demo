@@ -47,9 +47,8 @@ cf push -n mysubdomain6
  
 
  
-wait and see long logs
-see the route
-http://mysubdomain4.cfapps.io/all
+wait and see long logs, see the route, and browse there http://<route>
+
 
 
 ### Running on local machine
