@@ -25,7 +25,7 @@ This base application is intended to demonstrate some of the basic functionality
 - An IDE, like [Spring Tool Suite](http://info.pivotal.io/f00RC0N0lh01eU21IAJ260R)
 - [Java SE Development Kit](http://info.pivotal.io/n0I60i3021AN0JU0le10CRR)
 
-**Building**
+**Building (creating jar file)**
 ```
 $ git clone [REPO]
 $ cd [REPO]
@@ -40,6 +40,8 @@ Take a look at the manifest file for the recommended setting. Adjust them as per
 
 ```bash
 cf login -a https://api.run.pivotal.io
+cf push yourappnamexxx -p target/xxx-0.0.1-SNAPSHOT.jar
+or
 cf create-space spc1 -o allocation
 cf target -o allocation -s spc1
 cf push -n mysubdomain6
